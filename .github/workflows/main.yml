@@ -22,5 +22,6 @@ jobs:
 
       - name: 'Getting WARP+ Traffic'
         env:
-          DEVICEID: ${{ secrets.DEVICEID }}      
-        run: export TERM=xterm && python warp.py
+          DEVICEID: ${{ secrets.DEVICEID }}
+          TERM: xterm
+        run: python warp.py
