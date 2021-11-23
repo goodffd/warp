@@ -21,7 +21,7 @@ jobs:
           python-version: '3.x'
 
       - name: 'Getting WARP+ Traffic'
-        timeout-minutes: 525600
+        timeout-minutes: 1440
         env:
           DEVICEID: ${{ secrets.DEVICEID }}
           TERM: xterm
