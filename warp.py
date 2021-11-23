@@ -59,8 +59,8 @@ while True:
 		print("Getting WARP+ Traffic")
 		print("")
 		animation = ["[■□□□□□□□□□] 10%","[■■□□□□□□□□] 20%", "[■■■□□□□□□□] 30%", "[■■■■□□□□□□] 40%", "[■■■■■□□□□□] 50%", "[■■■■■■□□□□] 60%", "[■■■■■■■□□□] 70%", "[■■■■■■■■□□] 80%", "[■■■■■■■■■□] 90%", "[■■■■■■■■■■] 100%"] 
-		for i in range(len(animation)+1):
-			time.sleep(0.5)
+		for i in range(len(animation)):
+			time.sleep(1)
 			sys.stdout.write("\r[+] Preparing... " + animation[i % len(animation)])
 			sys.stdout.flush()
 		print(f"\n[-] WORK ON ID: {referrer}")    
