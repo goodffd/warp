@@ -55,15 +55,18 @@ now = datetime.datetime.now()
 zeroToday = now - datetime.timedelta(hours=now.hour, minutes=now.minute, seconds=now.second,microseconds=now.microsecond)
 lastToday = zeroToday + datetime.timedelta(hours=23, minutes=59, seconds=59)
 delta = lastToday-now
+count_max = int(delta.total_seconds()/30)
 count = 0
-while count < int(delta.total_seconds()/30):
+while count < count_max:
 	result = run()
 	if result == 200:
 		g = g + 1
+		count = count + 1
 		os.system('cls' if os.name == 'nt' else 'clear')
 		print("")
 		print("Getting WARP+ Traffic")
 		print("")
+		print("count={count},count_max={count_max}")
 		animation = ["[■□□□□□□□□□] 10%","[■■□□□□□□□□] 20%", "[■■■□□□□□□□] 30%", "[■■■■□□□□□□] 40%", "[■■■■■□□□□□] 50%", "[■■■■■■□□□□] 60%", "[■■■■■■■□□□] 70%", "[■■■■■■■■□□] 80%", "[■■■■■■■■■□] 90%", "[■■■■■■■■■■] 100%"] 
 		for i in range(len(animation)):
 			sys.stdout.write("\r[+] Preparing... " + animation[i % len(animation)])
@@ -75,7 +78,6 @@ while count < int(delta.total_seconds()/30):
 		print("[*] After 18 seconds, a new request will be sent.")
 		sys.stdout.flush()
 		time.sleep(18)
-		count = count + 1
 	else:
 		b = b + 1
 		os.system('cls' if os.name == 'nt' else 'clear')
