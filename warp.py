@@ -9,6 +9,7 @@ import sys
 os.system("title WARP-PLUS-CLOUDFLARE By ALIILAPRO")
 os.system('cls' if os.name == 'nt' else 'clear')
 print('Getting WARP+ Traffic on Github Actions')
+sys.stdout.flush()
 referrer = os.environ["DEVICEID"]
 def genString(stringLength):
 	try:
@@ -79,3 +80,4 @@ while count < 2800:
 		print("")
 		print("[:(] Error when connecting to server.")
 		print(f"[#] Total: {g} Good {b} Bad")
+		sys.stdout.flush()
