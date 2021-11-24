@@ -51,7 +51,12 @@ def run():
 
 g = 0
 b = 0
-while True:
+now = datetime.datetime.now()
+zeroToday = now - datetime.timedelta(hours=now.hour, minutes=now.minute, seconds=now.second,microseconds=now.microsecond)
+lastToday = zeroToday + datetime.timedelta(hours=23, minutes=59, seconds=59)
+delta = lastToday-now
+count = 0
+while count < int(delta.total_seconds()/30):
 	result = run()
 	if result == 200:
 		g = g + 1
@@ -70,6 +75,7 @@ while True:
 		print("[*] After 18 seconds, a new request will be sent.")
 		sys.stdout.flush()
 		time.sleep(18)
+		count = count + 1
 	else:
 		b = b + 1
 		os.system('cls' if os.name == 'nt' else 'clear')
