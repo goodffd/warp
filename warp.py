@@ -68,6 +68,7 @@ while count < 2800:
 		print(f"[:)] {g} GB has been successfully added to your account.")
 		print(f"[#] Total: {g} Good {b} Bad")
 		print("[*] After 18 seconds, a new request will be sent.")
+		sys.stdout.flush()
 		time.sleep(18)
 		count = count + 1
 	else:
