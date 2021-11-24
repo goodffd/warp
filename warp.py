@@ -66,7 +66,6 @@ while count < count_max:
 		print("")
 		print("Getting WARP+ Traffic")
 		print("")
-		print(f"now={now},count={count},count_max={count_max}")
 		animation = ["[■□□□□□□□□□] 10%","[■■□□□□□□□□] 20%", "[■■■□□□□□□□] 30%", "[■■■■□□□□□□] 40%", "[■■■■■□□□□□] 50%", "[■■■■■■□□□□] 60%", "[■■■■■■■□□□] 70%", "[■■■■■■■■□□] 80%", "[■■■■■■■■■□] 90%", "[■■■■■■■■■■] 100%"] 
 		for i in range(len(animation)):
 			sys.stdout.write("\r[+] Preparing... " + animation[i % len(animation)])
