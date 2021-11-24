@@ -50,7 +50,8 @@ def run():
 
 g = 0
 b = 0
-while True:
+count = 0
+while count < 2800:
 	result = run()
 	if result == 200:
 		g = g + 1
@@ -68,6 +69,7 @@ while True:
 		print(f"[#] Total: {g} Good {b} Bad")
 		print("[*] After 18 seconds, a new request will be sent.")
 		time.sleep(18)
+		count = count + 1
 	else:
 		b = b + 1
 		os.system('cls' if os.name == 'nt' else 'clear')
