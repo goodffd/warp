@@ -11,7 +11,7 @@ on:
 jobs:
   auto_getting_traffic:
     runs-on: ubuntu-latest
-    timeout-minutes: 2880
+    timeout-minutes: 1440
     steps:
       - name: 'Checking'
         uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
           python-version: '3.x'
 
       - name: 'Getting WARP+ Traffic'
-        timeout-minutes: 1440
+        timeout-minutes: 1410
         env:
           DEVICEID: ${{ secrets.DEVICEID }}
           TERM: xterm
