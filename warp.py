@@ -51,13 +51,13 @@ def run():
 
 g = 0
 b = 0
-count = 0
-now = datetime.datetime.now()
-zeroToday = now - datetime.timedelta(hours=now.hour, minutes=now.minute, seconds=now.second,microseconds=now.microsecond)
-lastToday = zeroToday + datetime.timedelta(hours=23, minutes=59, seconds=59)
-delta = lastToday-now
-count_max = int(delta.total_seconds()/30)
-
+#count = 0
+#now = datetime.datetime.now()
+#zeroToday = now - datetime.timedelta(hours=now.hour, minutes=now.minute, seconds=now.second,microseconds=now.microsecond)
+#lastToday = zeroToday + datetime.timedelta(hours=23, minutes=59, seconds=59)
+#delta = lastToday-now
+#count_max = int(delta.total_seconds()/30)
+count_max = 720
 while count < count_max:
 	result = run()
 	if result == 200:
