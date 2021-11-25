@@ -51,7 +51,7 @@ def run():
 
 g = 0
 b = 0
-#count = 0
+count = 0
 #now = datetime.datetime.now()
 #zeroToday = now - datetime.timedelta(hours=now.hour, minutes=now.minute, seconds=now.second,microseconds=now.microsecond)
 #lastToday = zeroToday + datetime.timedelta(hours=23, minutes=59, seconds=59)
