@@ -57,7 +57,7 @@ b = 0
 #lastToday = zeroToday + datetime.timedelta(hours=23, minutes=59, seconds=59)
 #delta = lastToday-now
 #count_max = int(delta.total_seconds()/30)
-count_max = 720
+count_max = 700
 while count < count_max:
 	result = run()
 	if result == 200:
